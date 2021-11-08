@@ -6,12 +6,12 @@ namespace Hi_World
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Jak se jmenujes?");
-            //string name = Console.ReadLine();
+            Console.WriteLine("Jak se jmenujes?");
+            string name = Console.ReadLine();
 
-            //Hello(name);
-
-            Console.WriteLine("Zadej cele cislo uzivately: ");
+            hello(name);
+            
+            Console.WriteLine("Zadej cele cislo " + name + ":");
 
             int x = int.Parse(Console.ReadLine());
 
@@ -19,30 +19,30 @@ namespace Hi_World
             Console.WriteLine("Vypocet: " + Calc(x));
         }
 
-        //static void Hello(string name)
-        //{
-        //    string name5p = "";
-        //    if (name == "Jiri")
-        //    {
-        //        name5p = "Jirko";
-        //    }
-        //    else if (name == "Anna")
-        //    {
-        //        name5p = "Anno";
-        //    }
-        //    else if (name == "Matous")
-        //    {
-        //        name5p = "Matousi";
-        //    }
-        //    else
-        //    {
-        //        name5p = name + ", omlouvam se ale tve jmeno neumim sklonovat";
-        //    }
-        //    string pozdrav = "Ahoj " + name5p;
-        //    Console.WriteLine(pozdrav);
+        static void hello(string name)
+        {
+            string name5p = "";
+            if (name == "jiri")
+            {
+                name5p = "jirko";
+            }
+            else if (name == "anna")
+            {
+                name5p = "anno";
+            }
+            else if (name == "matous")
+            {
+                name5p = "matousi";
+            }
+            else
+            {
+                name5p = name + ", omlouvam se ale tve jmeno neumim sklonovat";
+            }
+            string pozdrav = "ahoj " + name5p;
+            Console.WriteLine(pozdrav);
 
 
-        //}
+        }
         static int Calc(int x)
         {
            int result = x*2+10;
