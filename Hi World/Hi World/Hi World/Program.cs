@@ -17,11 +17,21 @@ namespace Hi_World
 
 
             //console.writeline("vypocet: " + calc(x));
-            Console.WriteLine("Zadej hodnotu F");
-            double q = double.Parse(Console.ReadLine()); 
-            double t = double.Parse(Console.ReadLine());
+           
 
-            Console.WriteLine("Prevod" + t + "F na C " + prevod(q));
+            ConvertFtoC();
+        }
+
+        /// <summary>
+        /// Converet tem F to C
+        /// </summary>
+        private static void ConvertFtoC()
+        {
+            Console.WriteLine("Zadej hodnotu F");
+            double q = double.Parse(Console.ReadLine());
+            double t = q;
+
+            Console.WriteLine("Prevod " + t + " F na C " + prevod(q));
         }
 
         //static void hello(string name)
@@ -45,7 +55,7 @@ namespace Hi_World
         //    }
         //    string pozdrav = "ahoj " + name5p;
         //    Console.WriteLine(pozdrav);
-            
+
 
 
         //}
@@ -53,7 +63,7 @@ namespace Hi_World
         //{
         //   int result = x*2+10;
         //    return result;
-           
+
         //}
 
         static double prevod(double q)
