@@ -6,10 +6,15 @@ namespace Hi_World
     {
         static void Main(string[] args)
         { 
-            Console.WriteLine("Hi World!");
-            Console.WriteLine("to je dneska nuda :D");
             Console.WriteLine("Jak se jmenujes?");
             string name = Console.ReadLine();
+
+            Hello(name);
+           
+        }
+
+        static void Hello(string name)
+        {
             string name5p = "";
             if (name == "Jiri")
             {
@@ -29,7 +34,6 @@ namespace Hi_World
             }
             string pozdrav = "Ahoj " + name5p;
             Console.WriteLine(pozdrav);
-           
         }
     }
 }
