@@ -5,7 +5,7 @@ namespace Hi_World
     class Program
     {
         static void Main(string[] args)
-        {
+        //{
             //console.writeline("jak se jmenujes?");
             //string name = console.readline();
 
@@ -17,21 +17,34 @@ namespace Hi_World
 
 
             //console.writeline("vypocet: " + calc(x));
-           
 
-            ConvertFtoC();
+
+            //ConvertFtoC();
+        //}
+        {
+            string input = ();
+            while (input != "x") ;
+            {
+                 input=ConvertFtoC();
+            }
+            
         }
+
+
 
         /// <summary>
         /// Converet tem F to C
         /// </summary>
-        private static void ConvertFtoC()
+        private static string ConvertFtoC()
         {
             Console.WriteLine("Zadej hodnotu F");
-            double q = double.Parse(Console.ReadLine());
+            string user_input = Console.ReadLine();
+            double q = double.Parse(user_input);
             double t = q;
 
             Console.WriteLine("Prevod " + t + " F na C " + prevod(q));
+
+            return user_input;
         }
 
         //static void hello(string name)
