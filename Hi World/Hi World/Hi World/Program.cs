@@ -10,17 +10,17 @@ namespace Hi_World
             //string name = console.readline();
 
             //hello(name);
-            
+
             //console.writeline("zadej cele cislo " + name + ":");
 
             //int x = int.parse(console.readline());
 
-         
-            //console.writeline("vypocet: " + calc(x));
 
+            //console.writeline("vypocet: " + calc(x));
+            Console.WriteLine("Zadej hodnotu F");
             double q = double.Parse(Console.ReadLine()); 
 
-            Console.WriteLine(prevod(q));
+            Console.WriteLine("Prevod na C" + prevod(q));
         }
 
         //static void hello(string name)
