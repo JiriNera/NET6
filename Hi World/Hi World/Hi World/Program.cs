@@ -10,7 +10,24 @@ namespace Hi_World
             Console.WriteLine("to je dneska nuda :D");
             Console.WriteLine("Jak se jmenujes?");
             string name = Console.ReadLine();
-            string pozdrav = "S pozdravem " + name;
+            string name5p = "";
+            if (name == "Jiri")
+            {
+                name5p = "Jirko";
+            }
+            else if (name == "Anna")
+            {
+                name5p = "Anno";
+            }
+            else if (name == "Matous")
+            {
+                name5p = "Matousi";
+            }
+            else
+            {
+                name5p = name + ", omlouvam se ale tve jmeno neumim sklonovat";
+            }
+            string pozdrav = "Ahoj " + name5p;
             Console.WriteLine(pozdrav);
            
         }
