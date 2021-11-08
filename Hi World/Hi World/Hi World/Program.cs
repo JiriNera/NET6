@@ -19,8 +19,9 @@ namespace Hi_World
             //console.writeline("vypocet: " + calc(x));
             Console.WriteLine("Zadej hodnotu F");
             double q = double.Parse(Console.ReadLine()); 
+            double t = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Prevod na C" + prevod(q));
+            Console.WriteLine("Prevod" + t + "F na C " + prevod(q));
         }
 
         //static void hello(string name)
