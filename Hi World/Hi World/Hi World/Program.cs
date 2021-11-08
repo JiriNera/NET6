@@ -35,18 +35,26 @@ namespace Hi_World
             string a = ("");
             while (a != "x")
             {
-                a = FillTxt();
+                a = Fill(args);
             }
         }
-        static string FillTxt(string x)
+        static string Fill(string[] x)
         {
             Console.WriteLine("Zadej jmeno a prijmeni nebo ukonci pomoci x");
+           
             string name = Console.ReadLine();
+            if (name == "x")
+            { return name; }
+
+            else if (string.IsNullOrEmpty(name))
+            { return name; }
+
+            else
             Console.WriteLine("Zadej svuj vek");
             int age = int.Parse(Console.ReadLine());
             string[] namesplit = name.Split(" ");
             if (namesplit[0] == "X")
-                return namesplit[0];
+            { return namesplit[0]; }
 
             File.AppendAllText("Name_age.txt",namesplit[0] + ";" + namesplit[1] + ";" + age+Environment.NewLine);
 
