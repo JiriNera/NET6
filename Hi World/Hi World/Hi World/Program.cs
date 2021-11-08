@@ -18,7 +18,7 @@ namespace Hi_World
          
             Console.WriteLine("Vypocet: " + Calc(x));
 
-            decimal q = 1,01;
+            decimal q = 3;
 
             Console.WriteLine(prevod(q));
         }
@@ -57,7 +57,7 @@ namespace Hi_World
 
         static decimal prevod(decimal q)
         {
-            decimal f = [q-32]/1,8;
+            decimal f = (q-32) /1.8;
             return f;
         }
 
