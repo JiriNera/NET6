@@ -13,10 +13,10 @@ namespace Hi_World
 
             Console.WriteLine("Zadej cele cislo uzivately: ");
 
-            int x = int.Parse(Console.ReadLine(num));
+            int x = int.Parse(Console.ReadLine());
 
          
-            Console.Writeline("Vypocet: "+ Calc(a);
+            Console.WriteLine("Vypocet: " + Calc(x));
         }
 
         //static void Hello(string name)
@@ -42,11 +42,10 @@ namespace Hi_World
         //    Console.WriteLine(pozdrav);
 
 
-        }
-        static void Calc(a)
+        //}
+        static int Calc(int x)
         {
-           
-            int result = a*2+10;
+           int result = x*2+10;
             return result;
            
         }
