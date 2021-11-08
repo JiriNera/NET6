@@ -6,6 +6,16 @@ namespace Hi_World
     class Program
     {
         static void Main(string[] args)
+        {
+            Console.WriteLine("Zadej datum narozeni ve formatu dd.MM.yyyy");
+            DateTime date =DateTime.Parse( Console.ReadLine());
+            DateTime now = DateTime.Now;
+
+            TimeSpan result = now-date;
+            TimeSpan numD = (result / 365);
+            Console.WriteLine(numD);
+
+        }
         //{
         //console.writeline("jak se jmenujes?");
         //string name = console.readline();
@@ -31,35 +41,35 @@ namespace Hi_World
         //    }
 
         //}
-        {
-            string a = ("");
-            while (a != "x")
-            {
-                a = Fill(args);
-            }
-        }
-        static string Fill(string[] x)
-        {
-            Console.WriteLine("Zadej jmeno a prijmeni nebo ukonci pomoci x");
+        //{
+        //    string a = ("");
+        //    while (a != "x")
+        //    {
+        //        a = Fill(args);
+        //    }
+        //}
+        //static string Fill(string[] x)
+        //{
+        //    Console.WriteLine("Zadej jmeno a prijmeni nebo ukonci pomoci x");
            
-            string name = Console.ReadLine();
-            if (name == "x")
-            { return name; }
+        //    string name = Console.ReadLine();
+        //    if (name == "x")
+        //    { return name; }
 
-            else if (string.IsNullOrEmpty(name))
-            { return name; }
+        //    else if (string.IsNullOrEmpty(name))
+        //    { return name; }
 
-            else
-            Console.WriteLine("Zadej svuj vek");
-            int age = int.Parse(Console.ReadLine());
-            string[] namesplit = name.Split(" ");
-            if (namesplit[0] == "X")
-            { return namesplit[0]; }
+        //    else
+        //    Console.WriteLine("Zadej svuj vek");
+        //    int age = int.Parse(Console.ReadLine());
+        //    string[] namesplit = name.Split(" ");
+        //    if (namesplit[0] == "X")
+        //    { return namesplit[0]; }
 
-            File.AppendAllText("Name_age.txt",namesplit[0] + ";" + namesplit[1] + ";" + age+Environment.NewLine);
+        //    File.AppendAllText("Name_age.txt",namesplit[0] + ";" + namesplit[1] + ";" + age+Environment.NewLine);
 
-            return namesplit[0];
-        }
+        //    return namesplit[0];
+        //}
 
 
         /// <summary>
