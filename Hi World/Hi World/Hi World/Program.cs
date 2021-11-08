@@ -6,43 +6,49 @@ namespace Hi_World
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Jak se jmenujes?");
-            string name = Console.ReadLine();
+            //Console.WriteLine("Jak se jmenujes?");
+            //string name = Console.ReadLine();
 
-            Hello(name);
+            //Hello(name);
 
-            Calculation z;
+            Console.WriteLine("Zadej cele cislo uzivately: ");
+
+            int x = int.Parse(Console.ReadLine(num));
+
+         
+            Console.Writeline("Vypocet: "+ Calc(a);
         }
 
-        static void Hello(string name)
-        {
-            string name5p = "";
-            if (name == "Jiri")
-            {
-                name5p = "Jirko";
-            }
-            else if (name == "Anna")
-            {
-                name5p = "Anno";
-            }
-            else if (name == "Matous")
-            {
-                name5p = "Matousi";
-            }
-            else
-            {
-                name5p = name + ", omlouvam se ale tve jmeno neumim sklonovat";
-            }
-            string pozdrav = "Ahoj " + name5p;
-            Console.WriteLine(pozdrav);
+        //static void Hello(string name)
+        //{
+        //    string name5p = "";
+        //    if (name == "Jiri")
+        //    {
+        //        name5p = "Jirko";
+        //    }
+        //    else if (name == "Anna")
+        //    {
+        //        name5p = "Anno";
+        //    }
+        //    else if (name == "Matous")
+        //    {
+        //        name5p = "Matousi";
+        //    }
+        //    else
+        //    {
+        //        name5p = name + ", omlouvam se ale tve jmeno neumim sklonovat";
+        //    }
+        //    string pozdrav = "Ahoj " + name5p;
+        //    Console.WriteLine(pozdrav);
 
 
         }
-        static void Calculation(int z)
+        static void Calc(a)
         {
-            int x = 5;
-            int y = x*2+10;
-            Console.WriteLine (y);
+           
+            int result = a*2+10;
+            return result;
+           
         }
     }
 }
