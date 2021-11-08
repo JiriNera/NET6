@@ -15,6 +15,7 @@ namespace Hi_World
             TimeSpan numD = (result / 365);
             Console.WriteLine(numD);
 
+          
         }
         //{
         //console.writeline("jak se jmenujes?");
