@@ -57,7 +57,7 @@ namespace Hi_World
             }
             catch (Exception ex)
             {
-                File.AppendAllText("errorlog.txt", "general exception" + Environment.NewLine);
+                File.AppendAllText("errorlog.txt", "general exception" + ex.Message + Environment.NewLine);
             }
 
             return user_input;
