@@ -17,6 +17,10 @@ namespace Hi_World
 
          
             Console.WriteLine("Vypocet: " + Calc(x));
+
+            decimal q = 1,01;
+
+            Console.WriteLine(prevod(q));
         }
 
         static void hello(string name)
@@ -40,6 +44,7 @@ namespace Hi_World
             }
             string pozdrav = "ahoj " + name5p;
             Console.WriteLine(pozdrav);
+            
 
 
         }
@@ -49,5 +54,12 @@ namespace Hi_World
             return result;
            
         }
+
+        static decimal prevod(decimal q)
+        {
+            decimal f = [q-32]/1,8;
+            return f;
+        }
+
     }
 }
