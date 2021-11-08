@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Hi_World
 {
@@ -41,12 +42,23 @@ namespace Hi_World
             Console.WriteLine("Zadej hodnotu F");
             
             string user_input = Console.ReadLine();
-            if(user_input == "x")
-                return user_input;
-            double q = double.Parse(user_input);
-            double t = q;
 
-            Console.WriteLine("Prevod " + t + " F na C " + prevod(q));
+            try
+            {
+                double q = double.Parse(user_input);
+                double t = q;
+
+                Console.WriteLine("Prevod " + t + " F na C " + prevod(q));
+            }
+            catch (FormatException ex)
+            {
+                if(user_input != "X")
+                    File.AppendAllText("errorlog.txt", ex.Message + Environment.NewLine);
+            }
+            catch (Exception ex)
+            {
+                File.AppendAllText("errorlog.txt", "general exception" + Environment.NewLine);
+            }
 
             return user_input;
         }
