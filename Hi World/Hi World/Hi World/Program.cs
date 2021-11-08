@@ -22,8 +22,9 @@ namespace Hi_World
             //ConvertFtoC();
         //}
         {
-            string input = ();
-            while (input != "x") ;
+            Console.WriteLine("Zadej teplotu ve F nebo stiskny x pro ukonceni");
+            string input =("");
+            while (input != "x")
             {
                  input=ConvertFtoC();
             }
@@ -35,10 +36,13 @@ namespace Hi_World
         /// <summary>
         /// Converet tem F to C
         /// </summary>
-        private static string ConvertFtoC()
+         static string ConvertFtoC()
         {
             Console.WriteLine("Zadej hodnotu F");
+            
             string user_input = Console.ReadLine();
+            if(user_input == "x")
+                return user_input;
             double q = double.Parse(user_input);
             double t = q;
 
