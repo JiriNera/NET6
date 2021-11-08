@@ -7,61 +7,69 @@ namespace Hi_World
     {
         static void Main(string[] args)
         //{
-            //console.writeline("jak se jmenujes?");
-            //string name = console.readline();
+        //console.writeline("jak se jmenujes?");
+        //string name = console.readline();
 
-            //hello(name);
+        //hello(name);
 
-            //console.writeline("zadej cele cislo " + name + ":");
+        //console.writeline("zadej cele cislo " + name + ":");
 
-            //int x = int.parse(console.readline());
-
-
-            //console.writeline("vypocet: " + calc(x));
+        //int x = int.parse(console.readline());
 
 
-            //ConvertFtoC();
+        //console.writeline("vypocet: " + calc(x));
+
+
+        //ConvertFtoC();
+        //}
+        //{
+        //    Console.WriteLine("Zadej teplotu ve F nebo stiskny x pro ukonceni");
+        //    string input =("");
+        //    while (input != "x")
+        //    {
+        //         input=ConvertFtoC();
+        //    }
+
         //}
         {
-            Console.WriteLine("Zadej teplotu ve F nebo stiskny x pro ukonceni");
-            string input =("");
-            while (input != "x")
-            {
-                 input=ConvertFtoC();
-            }
-            
-        }
+            Console.WriteLine("Zadej jmeno a prijmeni");
+            string name = Console.ReadLine();
+            Console.WriteLine("Zadej svuj vek");
+            int age = int.Parse(Console.ReadLine());
+            string[] namesplit = name.Split(" ");
 
+            File.AppendAllText("Name_age.txt",namesplit[0] + ";" + namesplit[1] + ";" + age+Environment.NewLine);
+        }
 
 
         /// <summary>
         /// Converet tem F to C
         /// </summary>
-         static string ConvertFtoC()
-        {
-            Console.WriteLine("Zadej hodnotu F");
+        // static string ConvertFtoC()
+        //{
+        //    Console.WriteLine("Zadej hodnotu F");
             
-            string user_input = Console.ReadLine();
+        //    string user_input = Console.ReadLine();
 
-            try
-            {
-                double q = double.Parse(user_input);
-                double t = q;
+        //    try
+        //    {
+        //        double q = double.Parse(user_input);
+        //        double t = q;
 
-                Console.WriteLine("Prevod " + t + " F na C " + prevod(q));
-            }
-            catch (FormatException ex)
-            {
-                if(user_input != "X")
-                    File.AppendAllText("errorlog.txt", ex.Message + Environment.NewLine);
-            }
-            catch (Exception ex)
-            {
-                File.AppendAllText("errorlog.txt", "general exception" + ex.Message + Environment.NewLine);
-            }
+        //        Console.WriteLine("Prevod " + t + " F na C " + prevod(q));
+        //    }
+        //    catch (FormatException ex)
+        //    {
+        //        if(user_input != "X")
+        //            File.AppendAllText("errorlog.txt", ex.Message + Environment.NewLine);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        File.AppendAllText("errorlog.txt", "general exception" + ex.Message + Environment.NewLine);
+        //    }
 
-            return user_input;
-        }
+        //    return user_input;
+        //}
 
         //static void hello(string name)
         //{
@@ -95,11 +103,11 @@ namespace Hi_World
 
         //}
 
-        static double prevod(double q)
-        {
-            double f = (q - 32) / 1.8;
-            return f;
-        }
+        //static double prevod(double q)
+        //{
+        //    double f = (q - 32) / 1.8;
+        //    return f;
+        //}
 
     }
 }
