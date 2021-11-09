@@ -63,15 +63,18 @@ namespace Day2
 
 
 
-                var peopel = PersonData.LoadPeopel();
-                Console.WriteLine(peopel.Count);
+                //var peopel = PersonData.LoadPeopel();
+                //Console.WriteLine(peopel.Count);
 
-                foreach(var item in peopel)
-                {
-                    Console.Write(item.FirstName + item.LastName + ", ");
+                //List<string> names = new List<string>();
 
-                }    
-
+                //foreach (var p in PersonData.LoadPeopel());
+                //{
+                //    names.Add(p.FirstName + " " + p.LastName);
+            
+                //}
+                //var joined = string.Join(";", names);
+                //Console.WriteLine(joined);
             }
 
             {
