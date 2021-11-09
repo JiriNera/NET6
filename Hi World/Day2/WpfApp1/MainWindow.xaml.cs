@@ -30,14 +30,15 @@ namespace WpfApp1
             if ((bool)chb_change.IsChecked)
             {
                 txb_info.Text = "Ahoj";
+                WindowMain.Background = Brushes.Blue;
             }
             else
             {
                 txb_info.Text = "Mas smulu";
+                WindowMain.Background = Brushes.Red;
             }
 
-            MainWindow.BackgroundProperty.OverrideMetadata(Background,#FF1CC92D);
-
+            
 
 
         }
