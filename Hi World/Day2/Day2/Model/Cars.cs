@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Day2.Model
+{
+    class Cars
+    {
+        public string Znacka { get; set; }
+
+        public string Barva { get; set; }
+
+        public string SPZ { get; set; }
+
+        public double KM { get; set; }
+    }
+}
