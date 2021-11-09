@@ -21,5 +21,27 @@ namespace Day2.Data
             File.AppendAllText(persondatafile, line);
 
         }
+
+        public static List<Person> LoadPeopel()
+        {
+            var peopel = new List<Person>();
+
+            var lines =File.ReadAllLines(persondatafile);
+
+            foreach(var line in lines)
+            {
+                var items = line.Split(';');
+                Person p = new Person();
+                p.FirstName = items[0];
+                p.LastName = items[1];
+                p.Birthday = DateTime.Parse(items[2]);
+                p.HomeAddress.City = items[3];
+                p.HomeAddress.Street = items[4];
+
+                peopel.Add(p);
+            }
+
+            return peopel;
+        }
     }
 }

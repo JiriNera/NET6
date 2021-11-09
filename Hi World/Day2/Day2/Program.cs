@@ -1,6 +1,7 @@
 ﻿using Day2.Data;
 using Day2.Model;
 using System;
+using System.Collections.Generic;
 
 namespace Day2
 {
@@ -12,6 +13,14 @@ namespace Day2
                 Person p = new Person("Petr", "Kubicek", new DateTime(1987, 2, 1));
                 p.HomeAddress.City = "Praha";
                 p.HomeAddress.Street = "Polni";
+
+                Person p1 = new Person("Anna", "Novakova", new DateTime(1996, 2, 1));
+                p1.HomeAddress.City = "Berlin";
+                p1.HomeAddress.Street = "Polni";
+
+                Person p2 = new Person("Vasek", "Novak", new DateTime(1999, 2, 1));
+                p2.HomeAddress.City = "London";
+                p2.HomeAddress.Street = "Polni";
 
                 Person p3 = new Person("Vasek", "Kubicek", new DateTime(1987, 2, 1));
                 p3.HomeAddress.City = "Olomouc";
@@ -33,11 +42,21 @@ namespace Day2
                 p7.HomeAddress.City = "Melnik";
                 p7.HomeAddress.Street = "Dolni";
 
-                foreach Person
-                    {
-                    PersonData.SavePerson(p7);
-                }
-                PersonData.SavePerson(p7);
+                Person p8 = new Person("Petra", "GRRRR", new DateTime(1989, 2, 1));
+                p8.HomeAddress.City = "Spodek";
+                p8.HomeAddress.Street = "Dolni";
+
+                Person p9 = new Person("Lucka", "Smith", new DateTime(1989, 2, 1));
+                p9.HomeAddress.City = "Spolek";
+                p9.HomeAddress.Street = "Leva";
+
+                //PersonData.SavePerson(p);
+
+               
+                var peopel = PersonData.LoadPeopel();
+                Console.WriteLine(peopel.Count);                  
+
+
 
             }
 
