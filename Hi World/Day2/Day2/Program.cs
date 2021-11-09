@@ -9,6 +9,9 @@ namespace Day2
         {
             {
                 Person p = new Person("Petr", "Kubicek", new DateTime(1987, 2, 1));
+                p.HomeAddress = new Address("Praha","ceska");
+                p.HomeAddress.City = "Praha";
+
             }
 
             {

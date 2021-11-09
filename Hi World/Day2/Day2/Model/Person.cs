@@ -8,19 +8,22 @@ namespace Day2.Model
 {
     class Person
     {
+        
         public Person()
         {
-
+            HomeAddress = new Address();
         }
 
         public Person(string firstname, string lastname)
         {
+            HomeAddress = new Address();
             FirstName = firstname;
             LastName = lastname;            
         }
 
         public Person(string firstname, string lastname,DateTime dob)
         {
+            HomeAddress = new Address();
             FirstName = firstname;
             LastName = lastname;
             Birthday = dob;
@@ -29,6 +32,8 @@ namespace Day2.Model
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public Address HomeAddress { get; set; }
 
         public DateTime Birthday { get; set; }
 
