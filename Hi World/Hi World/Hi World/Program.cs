@@ -7,52 +7,75 @@ namespace Hi_World
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Zadej datum narozeni ve formatu dd.MM.yyyy");
-            DateTime date =DateTime.Parse( Console.ReadLine());
-            DateTime now = DateTime.Now;
+            int age_max = 0;
+            string name_oldest = "";
+            foreach (var line in File.ReadLines("Lide.txt"))
+            {
+                string[] items = line.Split(';');
+                string name = items[0];
+                string age_s = items[1];
 
-            TimeSpan result = now-date;
-            TimeSpan numD = (result / 365);
-            Console.WriteLine(numD);
+                int age = int.Parse(age_s);
 
-          
+                if (age > age_max)
+                {
+                    age_max = age;
+                    name_oldest = name;
+                }
+            }
+            Console.WriteLine($"Nejstarsi je: { name_oldest} ({ age_max})");
         }
+
         //{
-        //console.writeline("jak se jmenujes?");
-        //string name = console.readline();
+        //    Console.WriteLine("Zadej datum narozeni ve formatu dd.MM.yyyy");
+        //    DateTime date = DateTime.Parse(Console.ReadLine());
+        //    DateTime now = DateTime.Now;
 
-        //hello(name);
-
-        //console.writeline("zadej cele cislo " + name + ":");
-
-        //int x = int.parse(console.readline());
-
-
-        //console.writeline("vypocet: " + calc(x));
+        //    TimeSpan result = now - date;
+        //    TimeSpan numD = result / 365;
+        //    Console.WriteLine(numD);
 
 
-        //ConvertFtoC();
         //}
+        ////{
+        ////console.writeline("jak se jmenujes?");
+        ////string name = console.readline();
+
+        ////hello(name);
+
+        ////console.writeline("zadej cele cislo " + name + ":");
+
+        ////int x = int.parse(console.readline());
+
+
+        ////console.writeline("vypocet: " + calc(x));
+
+
+        ////ConvertFtoC();
+        ////}
+        //static void Temp(string[])
         //{
         //    Console.WriteLine("Zadej teplotu ve F nebo stiskny x pro ukonceni");
-        //    string input =("");
+        //    string input = ("");
         //    while (input != "x")
         //    {
-        //         input=ConvertFtoC();
+        //        input = ConvertFtoC();
         //    }
 
         //}
-        //{
-        //    string a = ("");
-        //    while (a != "x")
-        //    {
-        //        a = Fill(args);
-        //    }
-        //}
+
+        ////static void Filltxt(string[])
+        ////{
+        ////    string a = ("");
+        ////    while (a != "x")
+        ////    {
+        ////        a = Fill();
+        ////    }
+        ////}
         //static string Fill(string[] x)
         //{
         //    Console.WriteLine("Zadej jmeno a prijmeni nebo ukonci pomoci x");
-           
+
         //    string name = Console.ReadLine();
         //    if (name == "x")
         //    { return name; }
@@ -61,42 +84,42 @@ namespace Hi_World
         //    { return name; }
 
         //    else
-        //    Console.WriteLine("Zadej svuj vek");
+        //        Console.WriteLine("Zadej svuj vek");
         //    int age = int.Parse(Console.ReadLine());
         //    string[] namesplit = name.Split(" ");
         //    if (namesplit[0] == "X")
         //    { return namesplit[0]; }
 
-        //    File.AppendAllText("Name_age.txt",namesplit[0] + ";" + namesplit[1] + ";" + age+Environment.NewLine);
+        //    File.AppendAllText("Name_age.txt", namesplit[0] + ";" + namesplit[1] + ";" + age + Environment.NewLine);
 
         //    return namesplit[0];
         //}
 
 
-        /// <summary>
-        /// Converet tem F to C
-        /// </summary>
-        // static string ConvertFtoC()
+        ///// <summary>
+        ///// Converet tem F to C
+        ///// </summary>
+        //static string convertftoc()
         //{
-        //    Console.WriteLine("Zadej hodnotu F");
-            
-        //    string user_input = Console.ReadLine();
+        //    console.writeline("zadej hodnotu f");
+
+        //    string user_input = console.readline();
 
         //    try
         //    {
-        //        double q = double.Parse(user_input);
+        //        double q = double.parse(user_input);
         //        double t = q;
 
-        //        Console.WriteLine("Prevod " + t + " F na C " + prevod(q));
+        //        console.writeline("prevod " + t + " f na c " + prevod(q));
         //    }
-        //    catch (FormatException ex)
+        //    catch (formatexception ex)
         //    {
-        //        if(user_input != "X")
-        //            File.AppendAllText("errorlog.txt", ex.Message + Environment.NewLine);
+        //        if (user_input != "x")
+        //            file.appendalltext("errorlog.txt", ex.message + environment.newline);
         //    }
-        //    catch (Exception ex)
+        //    catch (exception ex)
         //    {
-        //        File.AppendAllText("errorlog.txt", "general exception" + ex.Message + Environment.NewLine);
+        //        file.appendalltext("errorlog.txt", "general exception" + ex.message + environment.newline);
         //    }
 
         //    return user_input;
@@ -139,6 +162,63 @@ namespace Hi_World
         //    double f = (q - 32) / 1.8;
         //    return f;
         //}
+
+
+        //    static void CalcAge(string[] def)
+        //    {
+        //        int x =;
+        //        {
+        //            int x = Vyp();
+        //            Console.WriteLine(x);
+        //        }
+        //    }
+        //    static int Vyp(int age)
+        //    {
+        //        Console.WriteLine("Zadej rok narozeni:");
+        //        DateTime Vek = DateTime.Parse(Console.ReadLine());
+        //        DateTime myRok = DateTime.Now;
+        //        string rok = myRok.Year.ToString();
+        //        int year = int.Parse(rok);
+
+        //        return year;
+        //    }
+        //}
+        //static int AgeSolver(DateTime dateofbirth)
+        //{
+        //    DateTime today = DateTime.Today;
+        //    return (int)((today - dateofbirth).TotalDays / 365);
+        //}
+
+        //static int Compare(int x, int y)
+        //{
+        //    return Math.Max(x, y);
+
+        //}
+        //static bool IsEndingOva(string jmeno)
+        //{
+        //   return jmeno.EndsWith("ová");
+        //}
+
+        static void FindOld(string one)
+        {
+            int age_max = 0;
+            string name_oldest = "";
+            foreach(var line in File.ReadLines("Lide.txt"))
+            {
+                string[] items = line.Split(';');
+                string name = items[0];
+                string age_s = items[1];
+
+                int age = int.Parse(age_s);
+
+                if (age > age_max)
+                { 
+                  age_max = age;
+                  name_oldest = name;
+                }
+            }
+            Console.WriteLine($"Nejstarsi je: { name_oldest} ({ age_max})");
+        }
 
     }
 }
