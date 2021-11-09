@@ -199,11 +199,16 @@ namespace Hi_World
         //   return jmeno.EndsWith("ová");
         //}
 
-        static void FindOld(string one)
+       
+        {
+            FindOldest();
+        }
+
+        private static void FindOldest()
         {
             int age_max = 0;
             string name_oldest = "";
-            foreach(var line in File.ReadLines("Lide.txt"))
+            foreach (var line in File.ReadLines("Lide.txt"))
             {
                 string[] items = line.Split(';');
                 string name = items[0];
@@ -212,13 +217,12 @@ namespace Hi_World
                 int age = int.Parse(age_s);
 
                 if (age > age_max)
-                { 
-                  age_max = age;
-                  name_oldest = name;
+                {
+                    age_max = age;
+                    name_oldest = name;
                 }
             }
             Console.WriteLine($"Nejstarsi je: { name_oldest} ({ age_max})");
         }
-
     }
 }
