@@ -15,5 +15,15 @@ namespace Day2.Model
         public string SPZ { get; set; }
 
         public double KM { get; set; }
+
+        public void AddKM(double km)
+        {
+            KM += km;
+        }
+
+        public void ResetKM(double rkm)
+        {
+            KM = 0;
+        }
     }
 }
