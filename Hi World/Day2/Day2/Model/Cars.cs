@@ -28,6 +28,7 @@ namespace Day2.Model
 
         public override string ToString()
         {
-            return $"{SPZ} {Barva}";
+            return $"Registracni znacka: {SPZ} Barva auta: {Barva}";
         }
+    }
 }
