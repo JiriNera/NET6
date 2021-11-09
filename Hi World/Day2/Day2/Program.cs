@@ -50,23 +50,27 @@ namespace Day2
                 p9.HomeAddress.City = "Spolek";
                 p9.HomeAddress.Street = "Leva";
 
-                int calcp = 0;
+                //int calcp = 0;
 
-                while(calcp<10)
-                { 
-                    string calcptos = calcp.ToString();
-                    string task = "p" + calcptos;
-                    PersonData.SavePerson(task);
-                    calcp =+1;
-                }
+                //while(calcp<10)
+                //{ 
+                //    string calcptos = calcp.ToString();
+                //    string task = "p" + calcptos;
+                //    PersonData.SavePerson("p"+calcptos);
+                //    calcp =+1;
+                //}
 
-                
 
-               
+
+
                 var peopel = PersonData.LoadPeopel();
-                Console.WriteLine(peopel.Count);                  
+                Console.WriteLine(peopel.Count);
 
+                foreach(var item in peopel)
+                {
+                    Console.Write(item.FirstName + ", ");
 
+                }    
 
             }
 
