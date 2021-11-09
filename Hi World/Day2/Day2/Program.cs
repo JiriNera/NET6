@@ -10,9 +10,9 @@ namespace Day2
         static void Main(string[] args)
         {
             {
-                Person p = new Person("Petr", "Kubicek", new DateTime(1987, 2, 1));
-                p.HomeAddress.City = "Praha";
-                p.HomeAddress.Street = "Polni";
+                Person p0 = new Person("Petr", "Kubicek", new DateTime(1987, 2, 1));
+                p0.HomeAddress.City = "Praha";
+                p0.HomeAddress.Street = "Polni";
 
                 Person p1 = new Person("Anna", "Novakova", new DateTime(1996, 2, 1));
                 p1.HomeAddress.City = "Berlin";
@@ -50,7 +50,17 @@ namespace Day2
                 p9.HomeAddress.City = "Spolek";
                 p9.HomeAddress.Street = "Leva";
 
-                //PersonData.SavePerson(p);
+                int calcp = 0;
+
+                while(calcp<10)
+                { 
+                    string calcptos = calcp.ToString();
+                    string task = "p" + calcptos;
+                    PersonData.SavePerson(task);
+                    calcp =+1;
+                }
+
+                
 
                
                 var peopel = PersonData.LoadPeopel();
