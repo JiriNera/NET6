@@ -7,7 +7,22 @@ using System.Threading.Tasks;
 namespace Day2.Model
 {
     class Cars
+
     {
+        public Cars(string znacka, string barva, string spz, double km)
+        {
+            Znacka = znacka;
+            Barva = barva;
+            SPZ = spz;
+            KM = km;
+        }
+
+        public Cars()
+        {
+            
+        }
+
+
         public string Znacka { get; set; }
 
         public string Barva { get; set; }
