@@ -1,0 +1,8 @@
+Petr;Kubicek;01.02.1987 0:00:00;Praha;Polni
+Vasek;Kubicek;01.02.1987 0:00:00;Olomouc;Polni
+Vasek;Kubicek;01.02.1987 0:00:00;Olomouc;Polni
+Jan;Vel;01.02.1966 0:00:00;Olomouc;Ctvercova
+Jan;Good;01.02.1966 0:00:00;Tabor;Ctvercova
+Ondrej;Good;01.02.1999 0:00:00;Tabor;Ctvercova
+Petra;Letni;01.02.1953 0:00:00;Melnik;HOrni
+Petra;Zimni;01.02.1989 0:00:00;Melnik;Dolni
