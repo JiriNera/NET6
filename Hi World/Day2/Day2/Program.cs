@@ -68,7 +68,7 @@ namespace Day2
 
                 foreach(var item in peopel)
                 {
-                    Console.Write(item.FirstName + ", ");
+                    Console.Write(item.FirstName + item.LastName + ", ");
 
                 }    
 
