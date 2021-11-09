@@ -12,6 +12,8 @@ namespace Day2.Model
         
         public string Customer { get; set; }
 
-        public string items { get; set; }
+        public string Items { get; set; }
+
+
     }
 }

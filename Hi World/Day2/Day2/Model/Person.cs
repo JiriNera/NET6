@@ -8,6 +8,24 @@ namespace Day2.Model
 {
     class Person
     {
+        public Person()
+        {
+
+        }
+
+        public Person(string firstname, string lastname)
+        {
+            FirstName = firstname;
+            LastName = lastname;            
+        }
+
+        public Person(string firstname, string lastname,DateTime dob)
+        {
+            FirstName = firstname;
+            LastName = lastname;
+            Birthday = dob;
+        }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -18,6 +36,11 @@ namespace Day2.Model
         {
             DateTime today = DateTime.Today;
             return (int)((today - Birthday).TotalDays / 365);
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
         }
     }
 }

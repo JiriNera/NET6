@@ -25,5 +25,9 @@ namespace Day2.Model
         {
             KM = 0;
         }
-    }
+
+        public override string ToString()
+        {
+            return $"{SPZ} {Barva}";
+        }
 }
