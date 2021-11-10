@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Day2.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,25 +26,14 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void btn_hello_Click(object sender, RoutedEventArgs e)
+        private void btn_detail_osoby_Click(object sender, RoutedEventArgs e)
         {
-            if ((bool)chb_change.IsChecked)
-            {
-                txb_info.Text = "Ahoj";
-                WindowMain.Background = Brushes.Blue;
-            }
-            else
-            {
-                txb_info.Text = "Mas smulu";
-                WindowMain.Background = Brushes.Red;
-            }
-
-            
-
-
+            Day2.Model.Person p = new Person();
+            p.FirstName = "Alice";
+            p.LastName = "Smith";
+            p.Birthday = new DateTime(1998, 02, 11);
+            Persondetail pdwindow = new Persondetail(p);
+            pdwindow.Show();
         }
-
-
-    
     }
 }

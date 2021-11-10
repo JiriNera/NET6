@@ -7,9 +7,6 @@
         mc:Ignorable="d"
         Title="Skoleni C" Height="450" Width="500" Background="#FF1CC92D">
     <Grid>
-        <Button x:Name="btn_hello" Content="Button" HorizontalAlignment="Center" Height="37" Margin="0,274,0,0" VerticalAlignment="Top" Width="128" FontSize="18" Click="btn_hello_Click"/>
-        <TextBlock x:Name="txb_info" HorizontalAlignment="Left" Height="55" Margin="136,135,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" FontSize="24" TextAlignment="Center" FontFamily="Arial Black"/>
-        <CheckBox x:Name="chb_change" Content="CheckBox" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top"/>
-
+        <Button x:Name="btn_detail_osoby" Content="Detail osoby" HorizontalAlignment="Center" Margin="0,263,0,0" VerticalAlignment="Top" Height="73" Width="148" Click="btn_detail_osoby_Click"/>
     </Grid>
 </Window>

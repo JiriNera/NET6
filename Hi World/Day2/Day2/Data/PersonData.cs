@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Day2.Data
 {
-    class PersonData
+    public class PersonData
     {
         const string persondatafile= "peopel.txt";
        

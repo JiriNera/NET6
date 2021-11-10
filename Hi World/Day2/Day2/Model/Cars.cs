@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day2.Model
 {
-    class Cars
+    public class Cars
 
     {
         public Cars(string znacka, string barva, string spz, double km)

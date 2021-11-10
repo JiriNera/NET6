@@ -6,4 +6,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Day3\Day3.csproj" />
+    <ProjectReference Include="..\Day2\Day2.csproj" />
+  </ItemGroup>
+
 </Project>
