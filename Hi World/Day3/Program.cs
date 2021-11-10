@@ -80,10 +80,18 @@ namespace Day3
             //    Console.WriteLine(item);
             //}
 
-            foreach (string n in strings)
+            var result = strings.Select(slovo => slovo.ToLower() +" "+ slovo.ToUpper());
+
+
+
+            foreach (string n in result)
             {
-                Console.WriteLine(n.ToUpper());
+                Console.WriteLine(n);
             }
+
+
+
+
 
         }
     }
