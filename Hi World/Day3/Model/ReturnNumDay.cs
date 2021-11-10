@@ -8,7 +8,7 @@ namespace Day3.Model
 {
     class ReturnNumDay
     {
-        public int NumDay(string n)
+        public static int NumDay(string n)
         {
             n = n.ToLower();
 
