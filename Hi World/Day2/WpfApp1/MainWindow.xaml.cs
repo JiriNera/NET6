@@ -31,7 +31,7 @@ namespace WpfApp1
         private void btn_detail_osoby_Click(object sender, RoutedEventArgs e)
         {
             var p = (Person)grdPeopel.SelectedItem;
-            Persondetail pdwindow = new Persondetail(p);
+            Persondetail pdwindow = new Persondetail(p,this);
             pdwindow.Show();
         }
 
@@ -47,10 +47,11 @@ namespace WpfApp1
         //    }
         //}
 
-        private void WindowMain_Loaded(object sender, RoutedEventArgs e)
+        public void WindowMain_Loaded(object sender, RoutedEventArgs e)
         {
             //LoadInitialDataset();
             DataAccess.LoadPeopleFromDb();
+            
             grdPeopel.ItemsSource = DataAccess.people;
         }
     }

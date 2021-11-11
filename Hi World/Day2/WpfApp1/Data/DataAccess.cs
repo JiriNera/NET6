@@ -1,4 +1,5 @@
 ﻿using Day2.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,11 +17,26 @@ namespace WpfApp1.Data
        {
             using (var db = new PeopelContext())
             {
-                var peoplelist = db.Peopel.ToList();
+                var peoplelist = db.Peopel
+                    .Include(x=>x.HomeAddress)
+                    .Include(x=>x.Cars)
+                    .ToList();
 
                 people = new ObservableCollection<Person>(peoplelist);
             }
+            
        }
+        public static void SavePeopleToDb(Person personToSave)
+        {
+            using (var db = new PeopelContext())
+            {
+               var dbperson = db.Peopel.Find(personToSave.Id);
 
+                dbperson.FirstName = personToSave.FirstName;
+                dbperson.LastName = personToSave.LastName;
+
+                db.SaveChanges();
+            }
+        }
     }
 }
