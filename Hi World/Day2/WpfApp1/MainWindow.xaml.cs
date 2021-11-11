@@ -65,5 +65,16 @@ namespace WpfApp1
             Persondetail pdwindow = new Persondetail(null, this,true);
             pdwindow.Show();
         }
+
+       
+       
+        private void txtbox_text_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var name = txtbox_text.Text;
+
+            DataAccess.LoadPeopleFromDb();
+
+            grdPeopel.ItemsSource = DataAccess.people.Where(x => x.FirstName.Contains(name));
+        }
     }
 }

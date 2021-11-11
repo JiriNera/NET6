@@ -10,7 +10,7 @@
 
     <Grid>
         <Button x:Name="btn_detail_osoby" IsEnabled="False" Content="Editovat" HorizontalAlignment="Left" Margin="387,105,0,0" VerticalAlignment="Top" Height="56" Width="103" Click="btn_detail_osoby_Click"/>
-        <TextBox x:Name="txtbox_text" HorizontalAlignment="Left" Margin="31,40,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="31"/>
+        <TextBox x:Name="txtbox_text" HorizontalAlignment="Left" Margin="31,40,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="31" TextChanged="txtbox_text_TextChanged"/>
         <TextBlock x:Name="txtblock_list" HorizontalAlignment="Left" Margin="115,116,0,0" Text="List osob:" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="93" FontSize="20" FontWeight="Normal"/>
         <DataGrid x:Name="grdPeopel" VerticalAlignment="Bottom" Height="200" SelectionChanged="grdPeopel_Selected"/>
         <Button x:Name="btn_new_person" Content="Pridat osobu" HorizontalAlignment="Left" Height="56" Margin="270,105,0,0" VerticalAlignment="Top" Width="112" Click="btn_new_person_Click"/>
