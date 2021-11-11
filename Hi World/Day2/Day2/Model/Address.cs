@@ -22,5 +22,10 @@ namespace Day2.Model
 
         public string City { get; set; }
 
+        public override string ToString()
+        {
+            return Street + ", " + City;
+        }
+
     }
 }

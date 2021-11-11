@@ -33,7 +33,10 @@ namespace Day2.Model
 
         public string LastName { get; set; }
 
-        public Address HomeAddress { get; set; }
+        public Address HomeAddress { get; set; } = new Address();
+
+        public List<Cars> Cars { get; set; } = new List<Cars>();
+
 
         public DateTime Birthday { get; set; }
 
