@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,14 +32,19 @@ namespace Day2.Model
         }
 
         public int Id { get; set; }
+
+        [MaxLength(200)]
         public string FirstName { get; set; }
 
+        [MaxLength(200)]
         public string LastName { get; set; }
 
         public Address HomeAddress { get; set; } = new Address();
 
         public List<Cars> Cars { get; set; } = new List<Cars>();
 
+        [NotMapped]
+        public int CarsCount { get { return Cars.Count; } }
 
         public DateTime Birthday { get; set; }
 

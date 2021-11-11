@@ -81,5 +81,18 @@ namespace WpfApp1
         {
             txtbox_text.Clear();
         }
+
+        private void grdPeopel_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            if(e.PropertyName =="Cars")
+            {
+                e.Cancel = true;
+            }
+
+            if(e.PropertyName =="Brithday")
+            {
+                
+            }
+        }
     }
 }
