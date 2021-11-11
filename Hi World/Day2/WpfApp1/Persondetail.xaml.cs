@@ -25,11 +25,20 @@ namespace WpfApp1
     {
         Person person;
         MainWindow mainWindow;
-        public Persondetail(Person _person,MainWindow _mainWindow)
+        bool isNewPerson = false;
+        public Persondetail(Person _person,MainWindow _mainWindow,bool _inNewPerson)
         {
             InitializeComponent();
             mainWindow = _mainWindow;
-            person = _person;
+            isNewPerson = _inNewPerson;
+
+            if (isNewPerson)
+                person = new Person();
+            else
+                person = _person;
+            
+
+
             txtFirstName.Text = person.FirstName;
             txtLastName.Text = person.LastName;
             txtBirthDay.Text =person.Birthday.ToShortDateString();
@@ -41,7 +50,11 @@ namespace WpfApp1
             person.FirstName = txtFirstName.Text;
             person.LastName = txtLastName.Text;
 
-            DataAccess.SavePeopleToDb(person);
+            if (isNewPerson)
+                DataAccess.AddNewPerson(person);
+            else
+                DataAccess.SavePeopleToDb(person);
+
             DataAccess.LoadPeopleFromDb();
             mainWindow.grdPeopel.ItemsSource = DataAccess.people;
             Close();

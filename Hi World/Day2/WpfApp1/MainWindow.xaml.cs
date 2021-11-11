@@ -31,7 +31,7 @@ namespace WpfApp1
         private void btn_detail_osoby_Click(object sender, RoutedEventArgs e)
         {
             var p = (Person)grdPeopel.SelectedItem;
-            Persondetail pdwindow = new Persondetail(p,this);
+            Persondetail pdwindow = new Persondetail(p,this,false);
             pdwindow.Show();
         }
 
@@ -53,6 +53,17 @@ namespace WpfApp1
             DataAccess.LoadPeopleFromDb();
             
             grdPeopel.ItemsSource = DataAccess.people;
+        }
+
+        private void grdPeopel_Selected(object sender, SelectionChangedEventArgs e)
+        {
+            btn_detail_osoby.IsEnabled = true;
+        }
+
+        private void btn_new_person_Click(object sender, RoutedEventArgs e)
+        {
+            Persondetail pdwindow = new Persondetail(null, this,true);
+            pdwindow.Show();
         }
     }
 }

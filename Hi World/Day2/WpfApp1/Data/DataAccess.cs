@@ -38,5 +38,15 @@ namespace WpfApp1.Data
                 db.SaveChanges();
             }
         }
+
+        public static void AddNewPerson(Person person)
+        {
+            using (var db = new PeopelContext())
+            {
+                db.Peopel.Add(person);
+
+                db.SaveChanges();
+            }
+        }
     }
 }
