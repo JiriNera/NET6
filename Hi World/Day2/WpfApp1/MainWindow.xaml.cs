@@ -74,7 +74,7 @@ namespace WpfApp1
 
             DataAccess.LoadPeopleFromDb();
 
-            grdPeopel.ItemsSource = DataAccess.people.Where(x => x.FirstName.Contains(name));
+            grdPeopel.ItemsSource = DataAccess.people.Where(x => x.FirstName.ToLower().Contains(name.ToLower())|| x.LastName.ToLower().Contains(name.ToLower()));
         }
     }
 }
