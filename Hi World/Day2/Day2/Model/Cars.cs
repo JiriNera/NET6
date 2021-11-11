@@ -22,7 +22,7 @@ namespace Day2.Model
             
         }
 
-
+        public int Id { get; set; }
         public string Znacka { get; set; }
 
         public string Barva { get; set; }

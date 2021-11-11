@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Data;
 
 namespace WpfApp1
 {
@@ -34,12 +35,23 @@ namespace WpfApp1
             pdwindow.Show();
         }
 
+        //private void LoadInitialDataset()
+        //{
+        //    using (var db = new PeopelContext())
+        //    {
+        //        var file = @"C:\Users\Virtualpro\Documents\NET6\Hi World\Day2\Day2\bin\Debug\net5.0\peopel.txt";
+        //        var peopel = PersonData.LoadPeopel(file);
+
+        //        db.Peopel.AddRange(peopel);
+        //        db.SaveChanges();
+        //    }
+        //}
+
         private void WindowMain_Loaded(object sender, RoutedEventArgs e)
         {
-            var file = @"C:\Users\Virtualpro\Documents\NET6\Hi World\Day2\Day2\bin\Debug\net5.0\peopel.txt";
-            var peopel = PersonData.LoadPeopel(file);
-
-            grdPeopel.ItemsSource = peopel;
+            //LoadInitialDataset();
+            DataAccess.LoadPeopleFromDb();
+            grdPeopel.ItemsSource = DataAccess.people;
         }
     }
 }
