@@ -29,10 +29,7 @@ namespace WpfApp1
 
         private void btn_detail_osoby_Click(object sender, RoutedEventArgs e)
         {
-            Day2.Model.Person p = new Person();
-            p.FirstName = "Alice";
-            p.LastName = "Smith";
-            p.Birthday = new DateTime(1998, 02, 11);
+            var p = (Person)grdPeopel.SelectedItem;
             Persondetail pdwindow = new Persondetail(p);
             pdwindow.Show();
         }
