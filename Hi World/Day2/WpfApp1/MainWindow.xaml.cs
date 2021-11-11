@@ -76,5 +76,10 @@ namespace WpfApp1
 
             grdPeopel.ItemsSource = DataAccess.people.Where(x => x.FirstName.ToLower().Contains(name.ToLower())|| x.LastName.ToLower().Contains(name.ToLower()));
         }
+
+        private void btn_reset_Click(object sender, RoutedEventArgs e)
+        {
+            txtbox_text.Clear();
+        }
     }
 }
