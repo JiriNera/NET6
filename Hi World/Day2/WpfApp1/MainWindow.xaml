@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
+        Loaded="WindowMain_Loaded"
         Title="Skoleni C" Height="450" Width="500" Background="#FF1CC92D">
+        
     <Grid>
-        <Button x:Name="btn_detail_osoby" Content="Detail osoby" HorizontalAlignment="Center" Margin="0,263,0,0" VerticalAlignment="Top" Height="73" Width="148" Click="btn_detail_osoby_Click"/>
+        <Button x:Name="btn_detail_osoby" Content="Detail osoby" HorizontalAlignment="Left" Margin="262,99,0,0" VerticalAlignment="Top" Height="73" Width="148" Click="btn_detail_osoby_Click"/>
+        <TextBox x:Name="txtbox_text" HorizontalAlignment="Left" Margin="31,40,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="31"/>
+        <TextBlock x:Name="txtblock_list" HorizontalAlignment="Left" Margin="115,116,0,0" Text="List osob:" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="93" FontSize="20" FontWeight="Normal"/>
+        <DataGrid x:Name="grdPeopel" VerticalAlignment="Bottom" Height="200"/>
+        
     </Grid>
 </Window>

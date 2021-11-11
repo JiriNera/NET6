@@ -22,11 +22,11 @@ namespace Day2.Data
 
         }
 
-        public static List<Person> LoadPeopel()
+        public static List<Person> LoadPeopel(string file = "peopel.txt")
         {
             var peopel = new List<Person>();
 
-            var lines =File.ReadAllLines(persondatafile);
+            var lines =File.ReadAllLines(file);
 
             foreach(var line in lines)
             {

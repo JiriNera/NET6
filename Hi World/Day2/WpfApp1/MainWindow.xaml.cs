@@ -1,4 +1,5 @@
-﻿using Day2.Model;
+﻿using Day2.Data;
+using Day2.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,14 @@ namespace WpfApp1
             p.Birthday = new DateTime(1998, 02, 11);
             Persondetail pdwindow = new Persondetail(p);
             pdwindow.Show();
+        }
+
+        private void WindowMain_Loaded(object sender, RoutedEventArgs e)
+        {
+            var file = @"C:\Users\Virtualpro\Documents\NET6\Hi World\Day2\Day2\bin\Debug\net5.0\peopel.txt";
+            var peopel = PersonData.LoadPeopel(file);
+
+            grdPeopel.ItemsSource = peopel;
         }
     }
 }
